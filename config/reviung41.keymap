@@ -19,16 +19,24 @@
 / {
 
 /* === 1. Macros === */
-    macros {
-        copy_macro: copy_macro {               /* 0 parámetros */
+ macros {
+        /* 0-parámetros — escribe “Hola” y Enter */
+        hola_macro: hola_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(C)>;
+            bindings = <&str "Hola" &kp ENTER>;
         };
 
-        
+        /* 1-parámetro — envía Ctrl + <keycode>    (ej.: &ctrl_macro KC_C) */
+        ctrl_macro: ctrl_macro {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&kp LC(${0})>;
+        };
 
-        dual_key_macro: dual_key_macro {       /* 2 parámetros */
+        /* 2-parámetros — envía dos keycodes consecutivos
+           Ej.: &dual_macro KC_TAB KC_ENTER */
+        dual_macro: dual_macro {
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
             bindings = <&kp ${0} &kp ${1}>;

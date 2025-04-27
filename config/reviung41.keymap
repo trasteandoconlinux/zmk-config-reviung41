@@ -20,26 +20,16 @@
 
 /* === 1. Macros === */
  macros {
-        /* 0-parámetros — escribe “Hola” y Enter */
-        hola_macro: hola_macro {
+     mcr_deg: mcr_deg {
+            label = "mcr_deg";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&str "Hola" &kp ENTER>;
-        };
-
-        /* 1-parámetro — envía Ctrl + <keycode>    (ej.: &ctrl_macro KC_C) */
-        ctrl_macro: ctrl_macro {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&kp LC(${0})>;
-        };
-
-        /* 2-parámetros — envía dos keycodes consecutivos
-           Ej.: &dual_macro KC_TAB KC_ENTER */
-        dual_macro: dual_macro {
-            compatible = "zmk,behavior-macro-two-param";
-            #binding-cells = <2>;
-            bindings = <&kp ${0} &kp ${1}>;
+            wait-ms = <20>;
+            tap-ms = <10>;
+            bindings =
+                <&macro_press &kp LALT>,
+                <&macro_tap &kp KP_N2 &kp KP_N4 &kp KP_N8>,
+                <&macro_release &kp LALT>;
         };
     };
 

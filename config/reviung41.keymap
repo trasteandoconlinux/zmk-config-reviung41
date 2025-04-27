@@ -17,6 +17,30 @@
 
 
 / {
+
+/* === 1. Macros === */
+    macros {
+        copy_macro: copy_macro {               /* 0 parámetros */
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(C)>;
+        };
+
+        string_macro: string_macro {           /* 1 parámetro */
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&str "${0}">;
+        };
+
+        dual_key_macro: dual_key_macro {       /* 2 parámetros */
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings = <&kp ${0} &kp ${1}>;
+        };
+    };
+
+    /* === 2. Keymap === */
+
         keymap {
                 compatible = "zmk,keymap";
 

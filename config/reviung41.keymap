@@ -40,9 +40,9 @@
             wait-ms = <20>;
             tap-ms = <10>;
             bindings =
-                <&macro_press &kp LALT>,
-                <&macro_tap &kp KP_N1 &kp KP_N4 &kp KP_N8>,
-                <&macro_release &kp LALT>;
+               &to 1                  /* Activa Layer 1               */
+               &rgb_ug RGB_SLD        /* Modo estático                */
+               &rgb_ug RGB_HSV 0 255 200   /* Rojo (H=0 S=255 V=200)  */
         };
     };
 

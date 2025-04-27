@@ -26,11 +26,7 @@
             bindings = <&kp LC(C)>;
         };
 
-        string_macro: string_macro {           /* 1 parámetro */
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&str "${0}">;
-        };
+        
 
         dual_key_macro: dual_key_macro {       /* 2 parámetros */
             compatible = "zmk,behavior-macro-two-param";

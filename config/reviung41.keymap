@@ -87,22 +87,11 @@
                 };
 
                 symbol_layer {
-
-
-//,-----------------------------------------------------.                    ,-----------------------------------------------------.
-          TD_GVTL, KC_EXLM,   KC_AT, KC_HASH,  KC_DLR, KC_PERC,                      KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_BSPC,
-      //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-          KC_TAB, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      TD_LBCB,  TD_RBCB, TD_SLPI, TD_QUDQ, TD_SCCO, KC_NO,
-      //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-          TD_LCAP, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      TD_UNMN,  TD_EQPL, TD_BKCO, TD_BKDO,TD_SLQU, TD_RCAP,
-
-
-
                         bindings = <
-   &trans &kp EXCL  &kp AT      &kp HASH &kp DLLR &kp PRCNT      &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR            &kp RPAR  &kp BSPC
-   &trans &kp TILDE &none       &kp LBRC &kp RBRC &kp PIPE       &kp LBRC   &kp RBRC  &kp BSLH   &kp SINGLE_QUOTE    &kp SEMI  &none 
-   &trans &kp ESC   &kp LGUI    &kp LALT &kp CLCK &kp DQT        &kp UNDER  &kp EQUAL &kp COMMA  &kp DOT             &kp SLASH &trans   
-                                 &trans      &trans       &trans        &trans       &trans
+   &kp TILDE  &kp EXCL  &kp AT      &kp HASH &kp DLLR &kp PRCNT      &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR            &kp RPAR  &kp BSPC
+   &kp TAB    &none     &none       &none    &none    &none          &kp LBRC   &kp RBRC  &kp BSLH   &kp SINGLE_QUOTE    &kp SEMI  &none 
+   &trans     &none     &none       &none    &none    &none          &kp UNDER  &kp EQUAL &kp COMMA  &kp DOT             &kp SLASH &trans   
+                                 &trans   &trans              &trans        &trans       &trans
                         >;
                 };
 

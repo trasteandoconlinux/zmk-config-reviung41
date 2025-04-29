@@ -1,4 +1,4 @@
-/*
+-/*
  * Copyright (c) 2020 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
@@ -128,7 +128,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
-            bindings = <&kp LSHFT>, <&caps>;
+            bindings = <&kp LSHFT>, <&kp CAPS>;
         };
         td_shift_caps_word: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";

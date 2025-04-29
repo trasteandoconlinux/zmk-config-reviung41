@@ -53,8 +53,8 @@
             bindings = <&macro_press &mo 1>
                      , <&macro_tap &rgb_ug RGB_COLOR_HSB(170,255,255)>  /* verde*/
                      , <&macro_pause_for_release>
-                     , <&macro_release &mo 1>
-                     , <&macro_tap &rgb_ug RGB_COLOR_HSB(0,0,0)> ;
+                     , <&macro_tap &rgb_ug RGB_COLOR_HSB(0,0,0)> 
+                     , <&macro_release &mo 1>;
         };
      mcr_num: mcr_num {
             label = "mcr_num";

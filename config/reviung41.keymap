@@ -26,7 +26,7 @@
                 <&macro_press>,
                 <&mo 1>,
                 <&macro_tap>,
-                <&rgb_ug RGB_ON &rgb_ug RGB_COLOR_HSB(128,100,100)>,
+                <&rgb_ug RGB_ON &rgb_ug RGB_COLOR_HSB(0,255,255)>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&mo 1>,
@@ -132,8 +132,7 @@
                         >;
                 };
         };
-};
-/ {
+
     behaviors {
         td_shift_caps: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";

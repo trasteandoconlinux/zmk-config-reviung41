@@ -43,7 +43,7 @@
                 <&macro_press>,
                 <&mo 2>,
                 <&macro_tap>,
-                <&rgb_ug RGB_ON &rgb_ug RGB_COLOR_HSB(100,100,100)>,
+                <&rgb_ug RGB_ON &rgb_ug RGB_COLOR_HSB(0,100,100)>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&mo 2>,
@@ -60,7 +60,7 @@
                 <&macro_press>,
                 <&mo 4>,
                 <&macro_tap>,
-                <&rgb_ug RGB_ON &rgb_ug RGB_COLOR_HSB(100,100,100)>,
+                <&rgb_ug RGB_ON &rgb_ug RGB_COLOR_HSB(285,100,80)>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&mo 4>,
@@ -75,7 +75,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&tog 3 &rgb_ug RGB_ON &rgb_ug RGB_COLOR_HSB(100,100,100)>,
+                <&tog 3 &rgb_ug RGB_ON &rgb_ug RGB_COLOR_HSB(0,0,100)>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&rgb_ug RGB_OFF &mo 3>;

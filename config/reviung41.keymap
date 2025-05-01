@@ -26,7 +26,7 @@
                 <&macro_press>,
                 <&mo 1>,
                 <&macro_tap>,
-                <&rgb_ug RGB_ON &rgb_ug RGB_COLOR_HSB(100,100,100)>,
+                <&rgb_ug RGB_ON &rgb_ug RGB_COLOR_HSB(240,100,100)>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&mo 1>,
@@ -78,7 +78,9 @@
                 <&tog 3 &rgb_ug RGB_ON &rgb_ug RGB_COLOR_HSB(0,0,100)>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&rgb_ug RGB_OFF &mo 3>;
+                <&mo 3>,
+                <&macro_tap>,
+                <&rgb_ug RGB_OFF>;;
 
             label = "MOVE_LAYER";
         };

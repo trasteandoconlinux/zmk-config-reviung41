@@ -11,7 +11,7 @@
 
 #define DEFAULT 0
 #define SYMBOL  1
-#define NUMBER  2
+#define NUMBER  2bfescf
 #define MOVE    3
 #define ADJUST  4
 
@@ -80,7 +80,7 @@
                 <&macro_release>,
                 <&mo 3>,
                 <&macro_tap>,
-                <&rgb_ug RGB_OFF>;;
+                <&rgb_ug RGB_OFF>;
 
             label = "MOVE_LAYER";
         };

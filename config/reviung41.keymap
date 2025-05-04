@@ -97,6 +97,19 @@
                 <&rgb_ug RGB_OFF>;
                 
         };
+        CAPS_con_led: shift_con_led {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                =  <&macro_press>,
+                <&kp CAPS &rgb_ug RGB_ON &rgb_ug RGB_COLOR_HSB(128,100,100)>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&kp CAPS>,
+                <&macro_tap>,
+                <&rgb_ug RGB_OFF>;
+                
+        };
     };
     /* === 2. Keymap === */
 
@@ -153,7 +166,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
-            bindings = <&shift_con_led>, <&kp CAPS>;
+            bindings = <&shift_con_led>, <&CAPS_con_led>;
         };
         td_shift_caps_word: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";

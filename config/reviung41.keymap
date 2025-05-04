@@ -19,80 +19,7 @@
 / {
 
 /* inicio insert*/
-    behaviors {
-        // For the "layer" key, it'd nice to be able to use it as either a shift or a toggle.
-        // Configure it as a tap dance, so the first tap (or hold) is a &mo and the second tap is a &to
-        lower: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "LAYER_TAP_DANCE";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&mo LOWER>, <&to LOWER>;
-        };
 
-	hml: homerow_mod_left {
-	     compatible = "zmk,behavior-hold-tap";
-	     label = "HRM_LEFT";
-	     flavor = "balanced";
-	     tapping-term-ms = <280>;
-	     quick-tap-ms = <175>;
-	     global-quick-tap;
-	     #binding-cells = <2>;
-	     bindings = <&kp>, <&kp>;
-	     hold-trigger-key-positions = <KEYS_R THUMBS>;
-	     hold-trigger-on-release;
-	};
-
-	hmr: homerow_mod_right {
-	     compatible = "zmk,behavior-hold-tap";
-	     label = "HRM_RIGHT";
-	     flavor = "balanced";
-	     tapping-term-ms = <280>;
-	     quick-tap-ms = <175>;
-	     global-quick-tap;
-	     #binding-cells = <2>;
-	     bindings = <&kp>, <&kp>;
-	     hold-trigger-key-positions = <KEYS_L THUMBS>;
-	     hold-trigger-on-release;
-	};
-
-	just_left: left_no_mods {
-	      compatible = "zmk,behavior-mod-morph";
-	      label = "JUST_LEFT";
-	      #binding-cells = <0>;
-	      bindings = <&kp LEFT>, <&kp LEFT>;
-	      mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
-	      keep-mods = <0>;
-	};
-	mega: mega_pairs {
- 	      compatible = "zmk,behavior-mod-morph";
-	      label = "MEGA_PAIRS";
-	      #binding-cells = <0>;
-	      bindings = <&mega_abrq>, <&parens>;
-	      mods = <(MOD_LALT|MOD_RALT)>;
-	};
-	mega_abrq: mega_abrq {
- 	      compatible = "zmk,behavior-mod-morph";
-	      label = "MEGA_ABRQ";
-	      #binding-cells = <0>;
-	      bindings = <&mega_brq>, <&abrackets>;
-	      mods = <(MOD_LGUI|MOD_RGUI)>;
-	};
-	mega_brq: mega_brq {
- 	      compatible = "zmk,behavior-mod-morph";
-	      label = "MEGA_BRQ";
-	      #binding-cells = <0>;
-	      bindings = <&braces>, <&mega_quotes>;
-	      mods = <(MOD_LCTL|MOD_RCTL)>;
-	};
-	mega_quotes: mega_quotes {
-		 compatible = "zmk,behavior-mod-morph";
-		 label = "MEGA_QUOTES";
-		 #binding-cells = <0>;
-		 bindings = <&dquotes>, <&squotes>;
-		 mods = <(MOD_LSFT|MOD_RSFT)>;
-	};
-    };
 
     combos {
     	   compatible = "zmk,combos";
@@ -387,6 +314,91 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
             keep-mods = <(MOD_RSFT)>;
         };
+
+        /* inicio insert*/
+        // For the "layer" key, it'd nice to be able to use it as either a shift or a toggle.
+        // Configure it as a tap dance, so the first tap (or hold) is a &mo and the second tap is a &to
+        lower: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LAYER_TAP_DANCE";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mo LOWER>, <&to LOWER>;
+        };
+
+	hml: homerow_mod_left {
+	     compatible = "zmk,behavior-hold-tap";
+	     label = "HRM_LEFT";
+	     flavor = "balanced";
+	     tapping-term-ms = <280>;
+	     quick-tap-ms = <175>;
+	     global-quick-tap;
+	     #binding-cells = <2>;
+	     bindings = <&kp>, <&kp>;
+	     hold-trigger-key-positions = <KEYS_R THUMBS>;
+	     hold-trigger-on-release;
+	};
+
+	hmr: homerow_mod_right {
+	     compatible = "zmk,behavior-hold-tap";
+	     label = "HRM_RIGHT";
+	     flavor = "balanced";
+	     tapping-term-ms = <280>;
+	     quick-tap-ms = <175>;
+	     global-quick-tap;
+	     #binding-cells = <2>;
+	     bindings = <&kp>, <&kp>;
+	     hold-trigger-key-positions = <KEYS_L THUMBS>;
+	     hold-trigger-on-release;
+	};
+
+	just_left: left_no_mods {
+	      compatible = "zmk,behavior-mod-morph";
+	      label = "JUST_LEFT";
+	      #binding-cells = <0>;
+	      bindings = <&kp LEFT>, <&kp LEFT>;
+	      mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+	      keep-mods = <0>;
+	};
+	mega: mega_pairs {
+ 	      compatible = "zmk,behavior-mod-morph";
+	      label = "MEGA_PAIRS";
+	      #binding-cells = <0>;
+	      bindings = <&mega_abrq>, <&parens>;
+	      mods = <(MOD_LALT|MOD_RALT)>;
+	};
+	mega_abrq: mega_abrq {
+ 	      compatible = "zmk,behavior-mod-morph";
+	      label = "MEGA_ABRQ";
+	      #binding-cells = <0>;
+	      bindings = <&mega_brq>, <&abrackets>;
+	      mods = <(MOD_LGUI|MOD_RGUI)>;
+	};
+	mega_brq: mega_brq {
+ 	      compatible = "zmk,behavior-mod-morph";
+	      label = "MEGA_BRQ";
+	      #binding-cells = <0>;
+	      bindings = <&braces>, <&mega_quotes>;
+	      mods = <(MOD_LCTL|MOD_RCTL)>;
+	};
+	mega_quotes: mega_quotes {
+		 compatible = "zmk,behavior-mod-morph";
+		 label = "MEGA_QUOTES";
+		 #binding-cells = <0>;
+		 bindings = <&dquotes>, <&squotes>;
+		 mods = <(MOD_LSFT|MOD_RSFT)>;
+	};
+        /* inicio insert*/ 
+
+
+
+
+
+
+
+
+
+
     };
 
 };

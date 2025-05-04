@@ -27,13 +27,13 @@
 	   		  timeout-ms = <50>;
           		  key-positions = <25 37>;
            		  bindings = <&caps_word>;
-			  layers = <ALPHAS>;
+			 
            };
 	   combo_capsword2 {
 	   		   timeout-ms = <50>;
           		   key-positions = <30 42>;
            		   bindings = <&caps_word>;
-			   layers = <ALPHAS>;
+			  
            };
 	   combo_home {
 	   	      timeout-ms = <50>;
@@ -386,9 +386,9 @@ rgb_ug_status_macro: rgb_ug_status_macro_0 {
         bindings = <&mo>, <&rgb_ug_status_macro>;
     };
 
-    bspc_del: backspace_delete {
+    bspc_del2: backspace_delete2 {
             compatible = "zmk,behavior-mod-morph";
-            label = "BACKSPACE_DELETE";
+            label = "BACKSPACE_DELETE2";
             #binding-cells = <0>;
             bindings = <&kp BACKSPACE>, <&kp DELETE>;
             mods = <(MOD_LGUI|MOD_RGUI)>;

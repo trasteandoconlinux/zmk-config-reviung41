@@ -89,8 +89,9 @@
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LSHFT>
-                , <&macro_tap &rgb_ug RGB_COLOR_HSB(128,100,100)>
+                , <&macro_tap &rgb_ug RGB_ON &rgb_ug RGB_COLOR_HSB(128,100,100)>
                 , <&macro_release &kp LSHFT>
+                , <&rgb_ug RGB_OFF>
                 ;
         };
     };

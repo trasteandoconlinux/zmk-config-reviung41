@@ -97,7 +97,7 @@
                 <&rgb_ug RGB_OFF>;
                 
         };
-        CAPS_con_led: shift_con_led {
+        CAPS_con_led: CAPS_con_led {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings

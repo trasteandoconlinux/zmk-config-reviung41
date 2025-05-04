@@ -84,6 +84,15 @@
 
             label = "MOVE_LAYER";
         };
+        shift_con_led: shift_con_led {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &rgb_ug RGB_COLOR_HSB(128,100,100)>
+                , <&macro_release &kp LSHFT>
+                ;
+        };
     };
     /* === 2. Keymap === */
 

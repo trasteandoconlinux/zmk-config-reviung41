@@ -48,8 +48,86 @@
 
     };
 
-    macros {
-        rgb_ug_status_macro: rgb_ug_status_macro_0 {
+    
+
+/* fin insert */
+
+
+
+
+
+
+
+
+ macros {
+        lower_layer: lower_layer {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&mo 1>,
+                <&macro_tap>,
+                <&rgb_ug RGB_ON &rgb_ug RGB_COLOR_HSB(240,100,100)>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&mo 1>,
+                <&macro_tap>,
+                <&rgb_ug RGB_OFF>;
+
+            label = "LOWER_LAYER";
+        };
+
+        raise_layer: raise_layer {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&mo 2>,
+                <&macro_tap>,
+                <&rgb_ug RGB_ON &rgb_ug RGB_COLOR_HSB(0,100,100)>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&mo 2>,
+                <&macro_tap>,
+                <&rgb_ug RGB_OFF>;
+
+            label = "RAISE_LAYER";
+        };
+
+        adjust_layer: adjust_layer {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&mo 4>,
+                <&macro_tap>,
+                <&rgb_ug RGB_ON &rgb_ug RGB_COLOR_HSB(285,100,80)>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&mo 4>,
+                <&macro_tap>,
+                <&rgb_ug RGB_OFF>;
+
+            label = "ADJUST_LAYER";
+        };
+
+        move_layer: move_layer {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&tog 3 &rgb_ug RGB_ON &rgb_ug RGB_COLOR_HSB(0,0,100)>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&mo 3>,
+                <&macro_tap>,
+                <&rgb_ug RGB_OFF>;
+
+            label = "MOVE_LAYER";
+        };
+
+       /* inicio insert*/
+rgb_ug_status_macro: rgb_ug_status_macro_0 {
             label = "RGB_UG_STATUS";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -149,100 +227,8 @@
 		#binding-cells = <0>;
 		bindings = <&pair LPAR RPAR>;
 	};
-    };
+       /* fin insert*/
 
-    magic: magic_hold_tap {
-        compatible = "zmk,behavior-hold-tap";
-        label = "MAGIC_HOLD_TAP";
-        #binding-cells = <2>;
-        flavor = "tap-preferred";
-        tapping-term-ms = <200>;
-        bindings = <&mo>, <&rgb_ug_status_macro>;
-    };
-
-    bspc_del: backspace_delete {
-            compatible = "zmk,behavior-mod-morph";
-            label = "BACKSPACE_DELETE";
-            #binding-cells = <0>;
-            bindings = <&kp BACKSPACE>, <&kp DELETE>;
-            mods = <(MOD_LGUI|MOD_RGUI)>;
-        };
-
-/* fin insert */
-
-
-
-
-
-
-
-
- macros {
-        lower_layer: lower_layer {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&mo 1>,
-                <&macro_tap>,
-                <&rgb_ug RGB_ON &rgb_ug RGB_COLOR_HSB(240,100,100)>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&mo 1>,
-                <&macro_tap>,
-                <&rgb_ug RGB_OFF>;
-
-            label = "LOWER_LAYER";
-        };
-
-        raise_layer: raise_layer {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&mo 2>,
-                <&macro_tap>,
-                <&rgb_ug RGB_ON &rgb_ug RGB_COLOR_HSB(0,100,100)>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&mo 2>,
-                <&macro_tap>,
-                <&rgb_ug RGB_OFF>;
-
-            label = "RAISE_LAYER";
-        };
-
-        adjust_layer: adjust_layer {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&mo 4>,
-                <&macro_tap>,
-                <&rgb_ug RGB_ON &rgb_ug RGB_COLOR_HSB(285,100,80)>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&mo 4>,
-                <&macro_tap>,
-                <&rgb_ug RGB_OFF>;
-
-            label = "ADJUST_LAYER";
-        };
-
-        move_layer: move_layer {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&tog 3 &rgb_ug RGB_ON &rgb_ug RGB_COLOR_HSB(0,0,100)>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&mo 3>,
-                <&macro_tap>,
-                <&rgb_ug RGB_OFF>;
-
-            label = "MOVE_LAYER";
-        };
     };
     /* === 2. Keymap === */
 
@@ -390,7 +376,24 @@
 	};
         /* inicio insert*/ 
 
+        /* inicio insert2*/
+        magic: magic_hold_tap {
+        compatible = "zmk,behavior-hold-tap";
+        label = "MAGIC_HOLD_TAP";
+        #binding-cells = <2>;
+        flavor = "tap-preferred";
+        tapping-term-ms = <200>;
+        bindings = <&mo>, <&rgb_ug_status_macro>;
+    };
 
+    bspc_del: backspace_delete {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BACKSPACE_DELETE";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSPACE>, <&kp DELETE>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
+        };
+        /* fin insert2*/
 
 
 

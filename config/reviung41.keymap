@@ -128,8 +128,8 @@
                 lower_layer {
                         bindings = <
    &kp TILDE  &kp EXCL  &kp AT      &kp HASH &kp DLLR &kp PRCNT      &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR            &kp RPAR  &bspc_del
-   &kp TAB    &none     &none       &none    &none    &none          &kp LBRC   &kp RBRC  &kp BSLH   &kp SINGLE_QUOTE    &kp SEMI  &none 
-   &trans     &none     &none       &none    &none    &none          &td_minus  &kp EQUAL &kp COMMA  &kp DOT             &kp SLASH &trans   
+   &kp TAB    &none     &none       &none    &none    &none          &td_lbkt &td_lbkt    &td_bslh   &td_quote           &kp SEMI  &none 
+   &trans     &none     &none       &none    &none    &none          &td_minus  &td_equal &kp COMMA  &kp DOT             &kp SLASH &trans   
                                  &adjust_layer   &trans              &trans        &trans       &trans
                         >;
                 };
@@ -185,6 +185,30 @@
             #binding-cells = <0>;
             tapping-term-ms = <250>;
             bindings = <&kp SQT>, <&kp DQT>;
+        };
+        td_lbkt: tap_dance_4 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
+            bindings = <&kp LBKT>, <&kp LBRC>;
+        };
+        td_rbkt: tap_dance_5 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
+            bindings = <&kp RBKT>, <&kp RBRC>;
+        };
+        td_bslh: tap_dance_6 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
+            bindings = <&kp BSLH>, <&kp PIPE>;
+        };
+        td_equal: tap_dance_7 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
+            bindings = <&kp EQUAL>, <&kp PLUS>;
         };
         bspc_del: backspace_delete {
             compatible = "zmk,behavior-mod-morph";

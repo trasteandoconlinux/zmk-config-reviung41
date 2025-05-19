@@ -120,7 +120,7 @@
                         bindings = <
    &move_layer   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &bspc_del
    &mt LCTRL TAB  &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp RET
-   &td_shift_caps &kp X &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &td_shift_caps_word 
+   &td_shift_caps &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &td_shift_caps_word 
                         &kp LALT &numeros_layer &kp SPACE &simbolos_layer &kp RALT
                         >;
                 };
@@ -128,7 +128,7 @@
                 lower_layer {
                         bindings = <
    &kp TILDE  &kp EXCL  &kp AT      &kp HASH &kp DLLR &kp PRCNT      &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR            &kp RPAR  &bspc_del
-   &kp TAB    &none     &none       &none    &none    &none          &td_lbkt &td_lbkt    &td_bslh   &td_quote           &kp SEMI  &none 
+   &kp TAB    &none     &none       &none    &none    &none          &td_lbkt &td_rbkt    &td_bslh   &td_quote           &kp SEMI  &none 
    &trans     &none     &none       &none    &none    &none          &td_minus  &td_equal &kp COMMA  &kp DOT             &kp SLASH &trans   
                                  &adjust_layer   &trans              &trans        &trans       &trans
                         >;
